@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#10111b" />
+  <title>JJK Battlegrounds</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div><div class="eyebrow">CURSED ENERGY COMBAT</div><h1>JJK <span>BATTLEGROUNDS</span></h1></div>
+      <div class="status"><i></i> PROTOTYPE</div>
+    </header>
+
+    <section class="arena-panel">
+      <div class="arena-head"><span>SHINJUKU TRAINING GROUND</span><span id="roundLabel">ROUND 01</span></div>
+      <div class="arena" id="arena">
+        <div class="moon"></div><div class="city city-back"></div><div class="city city-front"></div>
+        <div class="domain-overlay" id="domainOverlay"><div class="domain-name" id="domainName">DOMAIN EXPANSION</div><div class="domain-sub">SURE-HIT EFFECT ACTIVE</div></div>
+        <div class="fighter player-fighter" id="playerFighter"><div class="aura"></div><div class="fighter-head"></div><div class="fighter-body"></div><div class="fighter-label">YOU</div></div>
+        <div class="fighter enemy-fighter" id="enemyFighter"><div class="aura"></div><div class="fighter-head"></div><div class="fighter-body"></div><div class="fighter-label">CURSE</div></div>
+        <div class="impact" id="impact"></div>
+        <div class="arena-message" id="arenaMessage">CHOOSE YOUR SORCERER</div>
+      </div>
+      <div class="health-area">
+        <div class="health-card"><div class="health-top"><strong id="playerName">YUJI ITADORI</strong><b id="playerHealthText">100 / 100</b></div><div class="bar"><div class="fill player-fill" id="playerHealth"></div></div><div class="meter-label">PLAYER HEALTH</div></div>
+        <div class="health-card enemy-health"><div class="health-top"><strong id="enemyName">GRADE 1 CURSE</strong><b id="enemyHealthText">100 / 100</b></div><div class="bar"><div class="fill enemy-fill" id="enemyHealth"></div></div><div class="meter-label">OPPONENT HEALTH</div></div>
+      </div>
+      <div class="energy-row"><span>CURSED ENERGY</span><div class="energy-bar"><div id="energyFill"></div></div><b id="energyText">0%</b></div>
+      <div class="ult-row"><span>ULTIMATE</span><div class="ult-bar"><div id="ultFill"></div></div><b id="ultText">0%</b></div>
+    </section>
+
+    <section class="controls-panel">
+      <div class="section-title"><span>01 / SELECT SORCERER</span><small>Choose a fighter</small></div>
+      <div class="character-grid" id="characterGrid"></div>
+      <div class="section-title action-title"><span>02 / COMBAT ACTIONS</span><small id="cooldownHint">Abilities consume cursed energy</small></div>
+      <div class="actions">
+        <button class="action-btn primary" id="attackBtn"><span class="key">1</span><strong>STRIKE</strong><small>Quick attack</small></button>
+        <button class="action-btn" id="heavyBtn"><span class="key">2</span><strong>HEAVY</strong><small>High damage</small></button>
+        <button class="action-btn" id="abilityBtn"><span class="key">3</span><strong id="abilityLabel">DIVERGENT FIST</strong><small id="abilityCost">25 energy</small></button>
+        <button class="action-btn ultimate-btn" id="ultimateBtn"><span class="key">4</span><strong id="ultimateLabel">BLACK FLASH RUSH</strong><small>Ultimate · 100%</small></button>
+      </div>
+      <div class="domain-card">
+        <div><div class="domain-kicker">FORBIDDEN TECHNIQUE</div><strong id="domainLabel">DOMAIN EXPANSION</strong><p id="domainDescription">Unleash your character's innate domain.</p></div>
+        <button id="domainBtn" class="domain-btn" disabled>DOMAIN <span>LOCKED</span></button>
+      </div>
+      <div class="bottom-row"><button id="restartBtn" class="secondary-btn">↻ RESTART MATCH</button><button id="soundBtn" class="secondary-btn">♫ SOUND: OFF</button></div>
+      <p class="hint">Mobile: tap the action buttons. Desktop: use keys 1–4. This is an original fan-made prototype, not an official game.</p>
+    </section>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
